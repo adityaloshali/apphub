@@ -1,0 +1,14 @@
+[
+  {
+    "thumbnail": "https://cdn.shopify.com/app-store/listing_images/2b1e15082bfdc3b29c516461be6bd261/icon/COH/wc/Xwu8CEAE=.png?height=84&width=84",
+    "name": "AfterShip Order Tracking & SMS",
+    "description": "Order Lookup Page, Track Order Status, Shipping Notifications.",
+    "url": "https://apps.shopify.com/aftership?surface_detail=orders-and-shipping&surface_inter_position=1&surface_intra_position=1&surface_type=category"
+  },
+  {
+    "thumbnail": "https://cdn.shopify.com/app-store/listing_images/a53cf2ce9b5dabf5dd222b3615c29569/icon/CPXdk7L0lu8CEAE=.png?height=84&width=84",
+    "name": "Point of Sale",
+    "description": "Unify online and in-person sales.",
+    "url": "https://apps.shopify.com/shopify-pos?surface_detail=orders-and-shipping&surface_inter_position=1&surface_intra_position=3&surface_type=category"
+  }
+]

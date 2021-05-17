@@ -1,0 +1,137 @@
+.card {
+  position: relative;
+  width: auto;
+  height: 200px;
+  border-radius: 15px;
+  margin: 10px;
+  box-shadow:
+  inset  5px 5px 5px rgba(0, 0, 0, 0.2),
+  inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+         5px 5px 15px rgba(0, 0, 0, 0.3),
+        -5px -5px 15px rgba(255, 255, 255, 0.1);
+
+  &.detailed {
+    height: auto;
+    min-height: unset;
+    padding: 15px;
+
+    .box {
+      position: relative;
+      top: unset;
+      right: unset;
+      bottom: unset;
+      left: unset;
+      height: 100%;
+      align-items: flex-start;
+
+      .content {
+        padding-top: 80px;
+        justify-content: space-between;
+
+        .info {
+          position: relative;
+          top: 0px;
+          left: 0px;
+          text-align: start;
+          padding: 0;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .box {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    background: #1a1a1b;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+  }
+
+  .content {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .image {
+      position: absolute;
+      top: 0px;
+      left: -10px;
+      width: 80px;
+      pointer-events: none;
+      
+      div {
+        border-bottom-right-radius: 15px;
+      }
+    }
+
+    .info {
+      position: absolute;
+      top: 0px;
+      left: 60px;
+      right: 0px;
+      bottom: 0px;
+      padding: 1rem;
+
+      display: flex;
+      flex-direction: column;
+      // justify-content: space-between;
+
+      &-heading {
+        font-size: 1.4em;
+        font-weight: var(--heading--font-weight-strong);
+        line-height: var(--heading--line-height-h6);
+        color: var(--global--color-white-90);
+        z-index: 1;
+        transition: 0.5s;
+        margin-bottom: 15px;
+  
+        @media screen and (max-width: 600px) {
+          font-size: 1.1em;
+        }
+      }
+      
+      &-description {
+        font-size: 1em;
+        color: var(--global--color-white-50);
+        z-index: 1;
+        transition: 0.5s;
+      }
+    }
+    
+  }
+
+  &:hover .box {
+    transform: translateY(-20px);
+    box-shadow: 0 10px 40px rgba(54, 36, 36, 0.4);
+    background: linear-gradient(45deg, #B95CE4, #4F29CD);
+
+    &[data-category="marketing"] {
+      background: linear-gradient(45deg, var(--global--color-blue-40), var(--global--color-blue-30));
+    }
+    &[data-category="sales-and-conversion"] {
+      background: linear-gradient(45deg, var(--global--color-green-40), var(--global--color-green-30));
+    }
+    &[data-category="orders-and-shipping"] {
+      background: linear-gradient(45deg, var(--global--color-pink-40), var(--global--color-pink-30));
+    }
+    &[data-category="finances"] {
+      background: linear-gradient(45deg, var(--global--color-purple-40), var(--global--color-purple-30));
+    }
+    &[data-category="productivity"] {
+      background: linear-gradient(45deg, var(--global--color-yellow-40), var(--global--color-yellow-30));
+    }
+  }
+}

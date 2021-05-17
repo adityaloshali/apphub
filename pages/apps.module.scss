@@ -1,0 +1,103 @@
+.container {
+  padding: 2rem 6rem;
+
+  @media screen and (max-width: 800px) {
+    padding: 2rem 1.5rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 2rem 0.5rem;
+  }
+
+  .category-menu {
+    margin: 3rem 0;
+
+    &-list {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      border-bottom: 0.2px solid var(--global--color-white-50);
+      
+      &__item {
+        padding: 20px 20px;
+        font-size: var(--global--font-size-xs);
+        cursor: pointer;
+        border-bottom: 3px solid transparent;
+        transition: 0.2s ease-in;
+
+        &:hover {
+          color: var(--global--color-white-90);
+          border-color: var(--global--color-white-50);
+        }
+      }
+
+      @media screen and (max-width: 968px) {
+        flex-direction: column;
+        border-left: 0.2px solid var(--global--color-white-50);
+        border-bottom: none;
+
+        &__item {
+          border-left: 3px solid transparent;
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  .section {
+    margin-bottom: 3rem;
+
+    &-heading {
+      background-color: var(--global--color-white-90);
+      font-size: var(--heading--font-size-h4);
+      font-weight: var(--heading--font-weight-strong);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+      margin-bottom: 10px;
+      padding: 0 10px;
+
+      &[data-category="marketing"] {
+        background-image: linear-gradient(45deg, var(--global--color-blue-40), var(--global--color-blue-30));
+      }
+      &[data-category="sales-and-conversion"] {
+        background-image: linear-gradient(45deg, var(--global--color-green-40), var(--global--color-green-30));
+      }
+      &[data-category="orders-and-shipping"] {
+        background-image: linear-gradient(45deg, var(--global--color-pink-40), var(--global--color-pink-30));
+      }
+      &[data-category="finances"] {
+        background-image: linear-gradient(45deg, var(--global--color-purple-40), var(--global--color-purple-30));
+      }
+      &[data-category="productivity"] {
+        background-image: linear-gradient(45deg, var(--global--color-yellow-40), var(--global--color-yellow-30));
+      }
+    }
+
+    &-description {
+      font-size: var(--global--font-size-xs);
+      margin-bottom: 20px;
+      padding: 0 10px;
+    }
+
+    &-apps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 16px;
+
+      @media screen and (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media screen and (max-width: 800px) {
+        grid-gap: 10px;
+      }
+
+      @media screen and (max-width: 600px) {
+        grid-gap: 4px;
+      }
+    }
+  }
+}

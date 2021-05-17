@@ -1,0 +1,147 @@
+@charset "utf-8";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  // background-color: var(--global--color-black);
+  background-color: #000000;
+  min-height: 100vh;
+}
+
+:root {
+  --global--color-black: #090A0A;
+  --global--color-white: #FFFFFF;
+  --global--color-white-50: rgba(255, 255, 255, 0.5);
+  --global--color-white-90: rgba(255, 255, 255, 0.9);
+  --global--color-gray-10: #C6CBCB;
+  --global--color-gray-20: #919A9A;
+  --global--color-gray-30: #5E6767;
+  --global--color-gray-40: #2D3232;
+  --global--color-gray-50: #151717;
+  --global--color-blue-10: #CEECFC;
+  --global--color-blue-20: #9FD9F8;
+  --global--color-blue-30: #3FB3F2;
+  --global--color-blue-40: #0D80BE;
+  --global--color-blue-50: #085076;
+  --global--color-green-10: #CDF8E8;
+  --global--color-green-20: #8AEECA;
+  --global--color-green-30: #1FDA96;
+  --global--color-green-40: #159768;
+  --global--color-green-50: #0C543A;
+  --global--color-orange-10: #FEE5DA;
+  --global--color-orange-20: #FCB18F;
+  --global--color-orange-30: #F96C2C;
+  --global--color-orange-40: #BA3E05;
+  --global--color-orange-50: #6F2503;
+  --global--color-pink-10: #FADDE6;
+  --global--color-pink-20: #F19AB5;
+  --global--color-pink-30: #E54074;
+  --global--color-pink-40: #A81745;
+  --global--color-pink-50: #650E29;
+  --global--color-purple-10: #ECD8F1;
+  --global--color-purple-20: #CFA0DC;
+  --global--color-purple-30: #A044B9;
+  --global--color-purple-40: #702F81;
+  --global--color-purple-50: #3F1B49;
+  --global--color-yellow-10: #FEF6D8;
+  --global--color-yellow-20: #FCEAA7;
+  --global--color-yellow-30: #F9D95D;
+  --global--color-yellow-40: #CFA608;
+  --global--color-yellow-50: #856B05;
+  --global--color-primary: var(--global--color-gray-20);
+  --global--color-secondary: var(--global--color-white);
+  --global--color-primary-hover: var(--global--color-primary);
+  --global--color-background: var(--global--color-black);
+  --global--color-border: var(--global--color-gray-40);
+  --font-headings: 'Staatliches', cursive;
+  --font-base: "Open Sans",helvetica,sans-serif;
+  --global--font-primary: var(--font-base);
+  --global--font-secondary: var(--font-headings);
+  --global--font-size-base: 1.25rem;
+  --global--font-size-xs: 1.125rem;
+  --global--font-size-sm: 1.75rem;
+  --global--font-size-normal: 2rem;
+  --global--font-size-md: 3rem;
+  --global--font-size-lg: 3.75rem;
+  --global--font-size-xl: 4.5rem;
+  --global--font-size-xxl: 5.25rem;
+  --global--font-size-xxxl: 5.25rem;
+  --global--font-size-page-title: var(--global--font-size-xxl);
+  --global--letter-spacing: normal;
+  --global--line-height-body: 1.6;
+  --global--line-height-heading: 1.2;
+  --global--line-height-subhead: 1;
+  --heading--font-family: var(--global--font-secondary);
+  --heading--font-size-h6: var(--global--font-size-xs);
+  --heading--font-size-h5: var(--global--font-size-sm);
+  --heading--font-size-h4: var(--global--font-size-md);
+  --heading--font-size-h3: var(--global--font-size-lg);
+  --heading--font-size-h2: var(--global--font-size-xl);
+  --heading--font-size-h1: var(--global--font-size-page-title);
+  --heading--letter-spacing-h6: 0.05em;
+  --heading--letter-spacing-h5: var(--global--letter-spacing);
+  --heading--letter-spacing-h4: var(--global--letter-spacing);
+  --heading--letter-spacing-h3: var(--global--letter-spacing);
+  --heading--letter-spacing-h2: var(--global--letter-spacing);
+  --heading--letter-spacing-h1: var(--global--letter-spacing);
+  --heading--line-height-h6: var(--global--line-height-subhead);
+  --heading--line-height-h5: var(--global--line-height-subhead);
+  --heading--line-height-h4: var(--global--line-height-heading);
+  --heading--line-height-h3: var(--global--line-height-heading);
+  --heading--line-height-h2: var(--global--line-height-heading);
+  --heading--line-height-h1: var(--global--line-height-heading);
+  --heading--font-weight: normal;
+  --heading--font-weight-page-title: 300;
+  --heading--font-weight-strong: 600;
+}
+
+@mixin marketing {
+  background-color: var(--global--color-blue-30);
+}
+@mixin sales-and-conversion {
+  background-color: var(--global--color-green-30);
+}
+@mixin orders-and-shipping {
+  background-color: var(--global--color-pink-30);
+}
+@mixin finances {
+  background-color: var(--global--color-purple-30);
+}
+@mixin productivity {
+  background-color: var(--global--color-yellow-30);
+}
+
+::-moz-selection {
+  color: var(--global--color-orange-30);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+::selection {
+  color: var(--global--color-orange-30);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/elements/button.sass";
+@import "../node_modules/bulma/sass/elements/container.sass";
+@import "../node_modules/bulma/sass/grid/columns.sass";
+// @import "../node_modules/bulma/sass/components/navbar.sass";

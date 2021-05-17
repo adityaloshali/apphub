@@ -1,0 +1,27 @@
+[
+  {
+    "key": "marketing",
+    "name": "Marketing",
+    "description": "Capture the attention and loyalty of customers through social media, contests, loyalty programs, and more."
+  },
+  {
+    "key": "sales-and-conversion",
+    "name": "Sales & Conversion",
+    "description": "Turn store visits into sales by building trust and making it easy for customers to buy."
+  },
+  {
+    "key": "orders-and-shipping",
+    "name": "Orders & Shipping",
+    "description": "Track and fulfill orders, get your products out the door, and protect your business from risky transactions."
+  },
+  {
+    "key": "finances",
+    "name": "Finances",
+    "description": "Get help with taxes, profit calculation, and reporting."
+  },
+  {
+    "key": "productivity",
+    "name": "Productivity",
+    "description": "Reduce manual or repetitive tasks through bulk actions and automation."
+  }
+]

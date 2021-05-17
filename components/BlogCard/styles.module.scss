@@ -1,0 +1,28 @@
+.blogcard {
+  background-color: rgba(21,23,23,.5);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .image {
+    width: 100%;
+    height: 150px;
+  }
+
+  .content {
+    padding: 15px;
+    height: calc(100% -150px);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .title {
+      color: var(--global--color-white-90);
+      font-weight: 500;
+      font-size: var(--global--font-size-sm);
+      margin-bottom: 20px;
+    }
+  }
+
+}

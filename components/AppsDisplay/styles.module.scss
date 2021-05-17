@@ -1,0 +1,94 @@
+.apps {
+  color: var(--global-color-white-90);
+
+  .content-info {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .heading {
+    font-size: var(--heading--font-size-h2);
+    text-align: center;
+
+    @media screen and (max-width: 800px) {
+      font-size: var(--heading--font-size-h3);
+    }
+  }
+
+  .subheading {
+    font-size: var(--global--font-size-base);
+    text-align: center;
+  }
+
+  &-display {
+    margin: 3rem 10rem;
+    margin-top: 3rem;
+
+    @media (max-width: 1200px) {
+      margin-left: 4rem;
+      margin-right: 4rem;
+    }
+
+    @media (max-width: 800px) {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      margin-left: 4px;
+      margin-right: 4px;
+    }
+
+    // &--left {
+  
+    // }
+
+    &-menu {
+      list-style: none;
+      padding: 0;
+      border-left: 1.5px solid var(--global--color-border);
+      height: auto;
+
+      &--item {
+        font-weight: 600;
+        list-style-type: none;
+        margin: 0;
+        padding: 18px 28px;
+        transition: .3s all;
+        position: relative;
+        cursor: pointer;
+        border-left: 0px solid var(--global--color-border);
+
+        &:hover,
+        &.active {
+          border-width: 4px;
+          color: var(--global--color-white-90);
+        }
+
+        &.active {
+          &[data-category="marketing"] {
+            border-color: var(--global--color-blue-30);
+          }
+          &[data-category="sales-and-conversion"] {
+            border-color: var(--global--color-green-30);
+          }
+          &[data-category="orders-and-shipping"] {
+            border-color: var(--global--color-pink-30);
+          }
+          &[data-category="finances"] {
+            border-color: var(--global--color-purple-30);
+          }
+          &[data-category="productivity"] {
+            border-color: var(--global--color-yellow-30);
+          }
+        }
+      }
+    }
+
+    &-listing {
+      @media screen and (min-width: 769px) and (max-width: 1024px) {
+        width: 100% !important;
+      }
+    }
+  }
+}
