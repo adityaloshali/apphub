@@ -103,6 +103,6 @@ export async function getStaticProps(context) {
 
   return {
     props: { ...appsListing, articles },
-    revalidate: 60,
+    // revalidate: 60,
   }
 } 
