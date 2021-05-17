@@ -45,7 +45,7 @@
     &--link {
       font-family: var(--global--font-primary);
       color: var(--global--color-white);
-      text-decoration: none;
+      text-decoration: none !important;
       position: relative;
 
       &:hover {
