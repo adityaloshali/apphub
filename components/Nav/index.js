@@ -48,7 +48,7 @@ const Nav = ({ }) => {
             <a className={styles['navbar-menu--link']}>About</a>
           </Link>
         </div>
-        <div className={styles['navbar-menu--item']}>
+        <div className={[styles['navbar-menu--item'], styles['btn-find-app']].join(' ')}>
           <div onClick={() => router.push('/apps')}>
             <Button>Find Your App</Button>
           </div>

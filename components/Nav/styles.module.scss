@@ -4,7 +4,7 @@
   justify-content: space-between;
   padding: 10px 1.5rem;
 
-  @media (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     flex-direction: column;
   }
 
@@ -28,7 +28,7 @@
     transition: opacity 300ms, transform 300ms;
     will-change: transform;
 
-    @media (max-width: 768px) {
+    @media screen and (max-width: 768px) {
       transform: scaleY(0);
       opacity: 0;
     }
@@ -37,6 +37,19 @@
       transform: scaleY(1);
       opacity: 1;
     }
+
+    &--item {
+      @media screen and (max-width: 768px) {
+        margin-bottom: 1rem;
+      }
+  
+    }
+
+    // &--item.btn-find-app {
+    //   @media (max-width: 768px) {
+    //     display: none;
+    //   }
+    // }
 
     &--item:not(:last-child) {
       margin-right: 1.5rem;
@@ -83,7 +96,7 @@
     transition: all 250ms ease-out;
     cursor: pointer;
 
-    @media (min-width: 768px) {
+    @media screen and (min-width: 768px) {
       display: none;
     }
   }

@@ -1,17 +1,17 @@
 .container {
   margin: 4rem 10rem;
 
-  @media (max-width: 1200px) {
+  @media screen and (max-width: 1200px) {
     margin-left: 4rem;
     margin-right: 4rem;
   }
 
-  @media (max-width: 800px) {
+  @media screen and (max-width: 800px) {
     margin-left: 2rem;
     margin-right: 2rem;
   }
 
-  @media (max-width: 600px) {
+  @media screen and (max-width: 600px) {
     margin-left: 4px;
     margin-right: 4px;
   }

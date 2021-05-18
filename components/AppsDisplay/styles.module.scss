@@ -13,6 +13,10 @@
     @media screen and (max-width: 800px) {
       font-size: var(--heading--font-size-h3);
     }
+
+    @media screen and (max-width: 600px) {
+      font-size: var(--heading--font-size-h4);
+    }
   }
 
   .subheading {
@@ -24,17 +28,17 @@
     margin: 3rem 10rem;
     margin-top: 3rem;
 
-    @media (max-width: 1200px) {
+    @media screen and (max-width: 1200px) {
       margin-left: 4rem;
       margin-right: 4rem;
     }
 
-    @media (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       margin-left: 2rem;
       margin-right: 2rem;
     }
 
-    @media (max-width: 600px) {
+    @media screen and (max-width: 600px) {
       margin-left: 4px;
       margin-right: 4px;
     }
@@ -88,6 +92,10 @@
     &-listing {
       @media screen and (min-width: 769px) and (max-width: 1024px) {
         width: 100% !important;
+      }
+
+      @media screen and (max-width: 600px) {
+        padding: 0;
       }
     }
   }
