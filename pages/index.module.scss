@@ -57,6 +57,23 @@
     position: relative;
     height: 600px;
 
+    margin: 0 10rem;
+
+    @media screen and (max-width: 1200px) {
+      margin-left: 4rem;
+      margin-right: 4rem;
+    }
+
+    @media screen and (max-width: 800px) {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      margin-left: 4px;
+      margin-right: 4px;
+    }
+
     // @media (max-width: 768px) {
     //   height: max-content;
     // }
