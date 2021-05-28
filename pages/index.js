@@ -38,7 +38,7 @@ export default function Home(props) {
                 Shopify apps to serve your big needs.
               </div>
               <button className={styles['glow-on-hover']} type="button" onClick={() => router.push('/apps')}>
-                Find Your App
+                Sell Your App
               </button>
             </div>
           </div>

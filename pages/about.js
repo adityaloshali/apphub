@@ -7,7 +7,6 @@ import { getAppsListing } from '../lib/utils';
 import styles from './about.module.scss';
 
 export default function About(props) {
-
   return (
     <div>
       <Head>

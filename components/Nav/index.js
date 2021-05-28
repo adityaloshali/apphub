@@ -33,9 +33,14 @@ const Nav = ({ }) => {
         ></button>
       </div>
       <div className={[styles['navbar-menu'], showMenu && styles['menu-active']].filter(Boolean).join(' ')}>
-        <div className={styles['navbar-menu--item']}>
+        {/* <div className={styles['navbar-menu--item']}>
           <Link href="/apps">
             <a className={styles['navbar-menu--link']}>Apps</a>
+          </Link>
+        </div> */}
+        <div className={styles['navbar-menu--item']}>
+          <Link href="/sell">
+            <a className={styles['navbar-menu--link']}>Sell</a>
           </Link>
         </div>
         <div className={styles['navbar-menu--item']}>
@@ -49,8 +54,8 @@ const Nav = ({ }) => {
           </Link>
         </div>
         <div className={[styles['navbar-menu--item'], styles['btn-find-app']].join(' ')}>
-          <div onClick={() => router.push('/apps')}>
-            <Button>Find Your App</Button>
+          <div onClick={() => router.push('/sell')}>
+            <Button>Sell Your App</Button>
           </div>
         </div>
       </div>
