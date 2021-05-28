@@ -32,7 +32,7 @@
     margin: 0 auto;
     position: relative;
     text-align: center;
-    // margin-bottom: 180px;
+    margin-bottom: 180px;
 
     @media screen and (max-width: 600px) {
       font-size: var(--heading--font-size-h3);
@@ -61,7 +61,17 @@
 
   .description {
     .spanstyle {
-      background-image: linear-gradient(45deg, var(--global--color-blue-40), var(--global--color-blue-30));
+      &-1 {
+        background-image: linear-gradient(45deg, var(--global--color-blue-40), var(--global--color-blue-30));
+      }
+
+      &-2 {
+        background-image: linear-gradient(45deg, var(--global--color-yellow-40), var(--global--color-yellow-30));
+      }
+
+      &-3 {
+        background-image: linear-gradient(45deg, var(--global--color-orange-40), var(--global--color-orange-30));
+      }
     }
 
     &.description-cta {

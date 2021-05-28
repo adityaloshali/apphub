@@ -18,16 +18,16 @@ export default function Sell() {
             We make your creation <span className={styles.spanstyle}>profitable</span>
           </div>
           <p className={styles.description}>
-            We provide a <span className={styles.spanstyle}>powerful platform</span> for the app creators to build and sell amazing apps.
+            We provide a <span className={[styles.spanstyle, styles['spanstyle-1']].join(' ')}>powerful platform</span> for the app creators to build and sell amazing apps.
             And solve some of the biggest challanges of store owners.
             With us you'll help teams and store owners to customize their tools and help them grow big.
           </p>
           <p className={styles.description}>
-            We provide best in the market <span className={styles.spanstyle}>liquidity</span> for the apps that you sell.
+            We provide best in the market <span className={[styles.spanstyle, styles['spanstyle-2']].join(' ')}>liquidity</span> for the apps that you sell.
             Our quick and easy procedures ensure that you pocket the best worth of your solution.
           </p>
           <p className={styles.description}>
-            We also provide you <span className={styles.spanstyle}>equity</span> in form of shares.
+            We also provide you <span className={[styles.spanstyle, styles['spanstyle-3']].join(' ')}>equity</span> in form of shares.
             You'll always own a fixed share of your app's revenue. It's your cash flowing asset.
           </p>
 

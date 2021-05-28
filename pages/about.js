@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 import Layout from '../components/Layout';
 import Button from '../components/Button';
@@ -7,6 +8,8 @@ import { getAppsListing } from '../lib/utils';
 import styles from './about.module.scss';
 
 export default function About(props) {
+  const router = useRouter();
+
   return (
     <div>
       <Head>
@@ -20,25 +23,24 @@ export default function About(props) {
             A <span className={styles.spanstyle}>powerful platform</span> for developers & teams
           </div>
           <div className={[styles.section, styles.first].join(' ')}>
-            <div className={styles['section-heading']}>Founded to foster <span className={styles.spanstyle}>innovation</span></div>
+            <div className={styles['section-heading']}>We build things <span className={styles.spanstyle}>inhouse</span></div>
             <div className={styles['section-divider']} />
             <div className={styles['section-info']}>
-              Appfire launched in 2005 as one of the original partners in the Atlassian software ecosystem. From the start, our focus has always been to help teams customize their tools so they can do better work together.
+              We build apps inhouse to help shop owners customize their tools so they can grow their store better.
 
-              16 years later and our mission is still the same: support our founders and teams with a powerful platform to build incredible solutions — fueled by innovation and customer feedback.
+              We have a team of hustlers and innovators on this powerful platform who build incredible and innovative apps incorporating customer feedback.
             </div>
             <Button>MEET THE TEAM</Button>
           </div>
 
           <div className={[styles.section, styles.second].join(' ')}>
-            <div className={styles['section-heading']}>Build something great <span className={styles.spanstyle}>with us</span></div>
+            <div className={styles['section-heading']}>We <span className={styles.spanstyle}>aquire</span> amazing apps</div>
             <div className={styles['section-divider']} />
             <div className={styles['section-info']}>
-              We started with a great group of developers and business teams to help them. Then, we joined forces with software companies you know and love to provide more resources and better support.
-
-              As we move forward, we continue to seek out the best builders, analysts, support engineers, marketers, and other business professionals with their eyes on providing unique solutions for our customers’ biggest challenges.
+              We seek out the best creators providing unique solutions for our customers biggest challenges. With us you'll help teams and store owners to customize their tools and help them grow big.
+              Sell us your amazing idea and join this platform in providing best value and resources to the store owners.
             </div>
-            <Button>VIEW OPENINGS</Button>
+            <Button onClick={() => router.push('/sell')}>SELL YOUR APP</Button>
           </div>
         </div>
       </Layout>

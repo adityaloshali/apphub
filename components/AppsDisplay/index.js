@@ -21,8 +21,25 @@ import styles from './styles.module.scss';
 // };
 
 const AppsDisplay = (props) => {
-  const categories = props.categories || [];
-  const listingMap = props.appsListing || {};
+  // const categories = props.categories || [];
+  // const listingMap = props.appsListing || {};
+  const categories = [{
+    "key": "orders-and-shipping",
+    "name": "Orders & Shipping",
+    "description": "Track and fulfill orders, get your products out the door, and protect your business from risky transactions."
+  }]
+
+  const listingMap = {
+    'orders-and-shipping': [
+      {
+        
+    "thumbnail": "https://cdn.shopify.com/app-store/listing_images/47694bcc580db734557159405f8a95e2/icon/COa0mLH0lu8CEAE=.png?height=84&width=84",
+    "name": "Shipping Address Validator",
+    "description": "Address verification to crush delivery failures and delays!",
+    "url": "https://apps.shopify.com/address-validator"
+      }
+    ]
+  }
   
   const router = useRouter();
   const [activeCategory, setActiveCategory] = React.useState(categories[0].key);
@@ -68,9 +85,9 @@ const AppsDisplay = (props) => {
             </div>
           </div>
         </div>
-        <div>
+        {/* <div>
           <Button onClick={() => router.push('/apps')}>More Apps</Button>
-        </div>
+        </div> */}
       </div>
     </div>
   );
