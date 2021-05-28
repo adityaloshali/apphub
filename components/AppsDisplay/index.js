@@ -48,7 +48,7 @@ const AppsDisplay = (props) => {
     <div className={styles.apps}>
       <div className={styles['content-info']}>
         <h2 className={styles.heading}>We have an app for your need</h2>
-        <p className={styles.subheading}>With 120+ apps to choose from, over a dozen brilliant software company founders, and a global company full of people on your side, rest assured: we’ve got you covered.</p>
+        {/* <p className={styles.subheading}>With 120+ apps to choose from, over a dozen brilliant software company founders, and a global company full of people on your side, rest assured: we’ve got you covered.</p> */}
       </div>
       <div className={styles['apps-display']}>
         <div className={['columns is-desktop'].join(' ')}>
