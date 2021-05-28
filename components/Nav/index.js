@@ -39,8 +39,8 @@ const Nav = ({ }) => {
           </Link>
         </div>
         <div className={styles['navbar-menu--item']}>
-          <Link href="/resources">
-            <a className={styles['navbar-menu--link']}>Resources</a>
+          <Link href="/blogs">
+            <a className={styles['navbar-menu--link']}>Blogs</a>
           </Link>
         </div>
         <div className={styles['navbar-menu--item']}>

@@ -8,9 +8,9 @@ import Layout from "../../components/Layout";
 import Image from "../../components/Image";
 import Seo from "../../components/Seo";
 
-import styles from './article.module.scss';
+import styles from './blog.module.scss';
 
-const Article = ({ article, categories }) => {
+const Blog = ({ article, categories }) => {
   const imageUrl = getStrapiMedia(article.image);
 
   const seo = {
@@ -82,15 +82,19 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const articles = await fetchAPI(
-    `/articles?slug=${params.slug}&status=published`
-  );
-  const categories = await fetchAPI("/categories");
-
-  return {
-    props: { article: articles[0], categories },
-    // revalidate: 1,
-  };
+  try {
+    const articles = await fetchAPI(
+      `/articles?slug=${params.slug}&status=published`
+    );
+    const categories = await fetchAPI("/categories");
+  
+    return {
+      props: { article: articles[0], categories },
+      // revalidate: 1,
+    };
+  } catch (error) {
+    return { articles: [], categories: [], appsListing: [] }
+  }
 }
 
-export default Article;
+export default Blog;

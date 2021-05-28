@@ -39,7 +39,7 @@ const Footer = (props) => (
         <div className="column is-3">
           <h4 className={styles.heading}>Resources</h4>
           <ul className={styles.section}>
-            <li className={styles['footer-link']}>Resources</li>
+            <li className={styles['footer-link']}>Blogs</li>
             <li className={styles['footer-link']}>Support</li>
             <li className={styles['footer-link']}>Documentation</li>
             <li className={styles['footer-link']}>Subscribe</li>

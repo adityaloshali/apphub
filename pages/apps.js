@@ -63,9 +63,13 @@ export default function Apps(props) {
 }
 
 export async function getStaticProps(context) {
-  const appsListing = await getAppsListing();
-
-  return {
-    props: { ...appsListing },
+  try {
+    const appsListing = await getAppsListing();
+  
+    return {
+      props: { ...appsListing },
+    }
+  } catch (error) {
+    return { articles: [], categories: [], appsListing: [] }
   }
 } 

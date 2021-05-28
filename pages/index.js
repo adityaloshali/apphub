@@ -84,7 +84,7 @@ export default function Home(props) {
                 ))
               }
             </div>
-            <Button onClick={() => router.push('/resources')}>
+            <Button onClick={() => router.push('/blogs')}>
               Read More
             </Button>
           </div>
@@ -95,14 +95,18 @@ export default function Home(props) {
 }
 
 export async function getStaticProps(context) {
-  const appsListingPromise = getAppsListing();
-  const articlesPromise = fetchAPI("/articles?status=published");
-
-  const appsListing = await appsListingPromise;
-  const articles = await articlesPromise;
-
-  return {
-    props: { ...appsListing, articles },
-    // revalidate: 60,
+  try {
+    const appsListingPromise = getAppsListing();
+    const articlesPromise = fetchAPI("/articles?status=published");
+  
+    const appsListing = await appsListingPromise;
+    const articles = await articlesPromise;
+  
+    return {
+      props: { ...appsListing, articles },
+      // revalidate: 60,
+    }
+  } catch (error) {
+    return { articles: [], categories: [], appsListing: [] }
   }
 } 

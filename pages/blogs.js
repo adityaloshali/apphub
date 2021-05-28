@@ -5,13 +5,13 @@ import BlogCard from '../components/BlogCard';
 import { fetchAPI } from '../lib/api';
 import { getAppsListing } from '../lib/utils';
 
-import styles from './resources.module.scss';
+import styles from './blogs.module.scss';
 
-export default function Resources(props) {
+export default function Blogs(props) {
   return (
     <div>
       <Head>
-        <title>Resources | AppHub</title>
+        <title>Blogs | AppHub</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -34,14 +34,18 @@ export default function Resources(props) {
 }
 
 export async function getStaticProps(context) {
-  const appsListingPromise = getAppsListing();
-  const articlesPromise = fetchAPI("/articles?status=published");
-
-  const appsListing = await appsListingPromise;
-  const articles = await articlesPromise;
-
-  return {
-    props: { ...appsListing, articles },
-    // revalidate: 60,
+  try {
+    const appsListingPromise = getAppsListing();
+    const articlesPromise = fetchAPI("/articles?status=published");
+  
+    const appsListing = await appsListingPromise;
+    const articles = await articlesPromise;
+  
+    return {
+      props: { ...appsListing, articles },
+      // revalidate: 60,
+    }
+  } catch (error) {
+    return { articles: [], categories: [], appsListing: [] }
   }
 } 

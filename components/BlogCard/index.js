@@ -15,7 +15,7 @@ const Button = ({ article }) => (
       <p id="title" className={styles.title}>
         {article.title}
       </p>
-      <CTA url={`/resources/${article.slug}`}>Read</CTA>
+      <CTA url={`/blogs/${article.slug}`}>Read</CTA>
     </div>
   </div>
 );

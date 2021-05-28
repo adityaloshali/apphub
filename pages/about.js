@@ -48,11 +48,15 @@ export default function About(props) {
 }
 
 export async function getStaticProps(context) {
-  const appsListingPromise = getAppsListing();
-  const appsListing = await appsListingPromise;
-
-  return {
-    props: { ...appsListing },
-    // revalidate: 60,
+  try {
+    const appsListingPromise = getAppsListing();
+    const appsListing = await appsListingPromise;
+  
+    return {
+      props: { ...appsListing },
+      // revalidate: 60,
+    }
+  } catch (error) {
+    return { articles: [], categories: [], appsListing: [] }
   }
 } 
